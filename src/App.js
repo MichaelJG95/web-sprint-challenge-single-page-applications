@@ -7,6 +7,7 @@ import schema from './validation/formSchema'
 import Home from './components/Home'
 import Form from './components/Form'
 import Confirmation from './components/Confirmation'
+import Help from './components/Help'
 
 const initialFormValues = {
   name: '',
@@ -73,6 +74,9 @@ const App = () => {
       </nav>
 
       <Switch>
+        <Route path="/help">
+          <Help />
+        </Route>
         <Route path="/confirmation">
           <Confirmation />
         </Route>
