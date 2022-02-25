@@ -92,7 +92,12 @@ const Form = ({ values, errors, change, submit }) => {
             </div>
 
             <label>Special requests
-                <textarea id='special-text'/>
+                <textarea 
+                    id='special-text'
+                    name='special'
+                    onChange={onChange}
+                    value={values.special}
+                    />
             </label>
         </form>
     )

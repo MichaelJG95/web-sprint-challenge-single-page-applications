@@ -12,7 +12,8 @@ const formSchema = yup.object().shape({
     pineapple: yup.boolean(),
     olives: yup.boolean(),
     bacon: yup.boolean(),
-    pineNuts: yup.boolean()
+    pineNuts: yup.boolean(),
+    special: yup.string()
 })
 
 export default formSchema;
