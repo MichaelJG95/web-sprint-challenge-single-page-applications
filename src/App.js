@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios'
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Link, Switch, useHistory } from 'react-router-dom'
 import * as yup from 'yup'
 import schema from './validation/formSchema'
 
@@ -73,7 +73,7 @@ const App = () => {
       </nav>
 
       <Switch>
-      <Route path="/help">
+        <Route path="/confirmation">
           <Confirmation />
         </Route>
         <Route path="/pizza">

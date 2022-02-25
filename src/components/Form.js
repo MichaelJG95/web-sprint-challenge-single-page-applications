@@ -1,10 +1,19 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
+
 
 const Form = ({ values, errors, change, submit }) => {
+
+    const history = useHistory()
+
+    const routeToConfirmation = () => {
+        history.push("/confirmation")
+    }
 
     const onSubmit = evt => {
         evt.preventDefault()
         submit()
+        routeToConfirmation()
       }
 
     const onChange = event => {
@@ -19,7 +28,7 @@ const Form = ({ values, errors, change, submit }) => {
             <div className='form-group submit'>
                 <h2>Make your order</h2>
 
-                <button id="order-button">Place Order</button>
+                <button id="order-button" >Place Order</button>
 
                 <div className='errors'>
                     <div>{errors.name}</div>
@@ -47,7 +56,7 @@ const Form = ({ values, errors, change, submit }) => {
                     <option value=''>- Select an option -</option>
                     <option value='small'>Small</option>
                     <option value='medium'>Medium</option>
-                    <option value='Large'>Large</option>
+                    <option value='large'>Large</option>
                 </select>
             </label>
 
